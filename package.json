@@ -1,0 +1,19 @@
+{
+  "name": "soundbox_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanikarajpure/soundbox_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanikarajpure/soundbox_backend/issues"
+  },
+  "homepage": "https://github.com/Sanikarajpure/soundbox_backend#readme"
+}
