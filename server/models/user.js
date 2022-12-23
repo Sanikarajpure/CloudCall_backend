@@ -36,7 +36,12 @@ const userSchema = mongoose.Schema(
       trim: true,
       unique: true,
     },
-    vrified: { type: Boolean, default: false },
+    friends: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   { timestamps: true }
 );

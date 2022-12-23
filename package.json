@@ -1,22 +1,22 @@
 {
-  "name": "soundbox_backend",
+  "name": "cloudcall_backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"nodemon server/server.js"
+    "server": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sanikarajpure/soundbox_backend.git"
+    "url": "git+https://github.com/Sanikarajpure/CloudCall_backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sanikarajpure/soundbox_backend/issues"
+    "url": "https://github.com/Sanikarajpure/CloudCall_backend/issues"
   },
-  "homepage": "https://github.com/Sanikarajpure/soundbox_backend#readme",
+  "homepage": "https://github.com/Sanikarajpure/CloudCall_backend#readme",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "axios": "^0.27.2",
@@ -34,6 +34,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.8",
     "nodemon": "^2.0.16",
+    "socket.io": "^4.5.3",
+    "uuid": "^9.0.0",
     "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
   }

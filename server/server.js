@@ -10,13 +10,16 @@ const routes = require("./routes");
 const { convertToApiError, handleError } = require("./middlewares/apiError");
 
 const CONSTANTS = require("./constants/Constants");
+const socketServer = require("./socketServer");
+
+const http = require("http");
+const server = http.createServer(app);
+socketServer.registerSocketServer(server);
 
 //MongoDb Connection
 const mongoUri = `mongodb+srv://${process.env.DB_ADMIN}:${process.env.DB_PASS}@${process.env.DB_HOST}?retryWrites=true&w=majority`;
 
 mongoose.connect(mongoUri);
-
-const connection = mongoose.connection;
 
 //CORS
 app.use(cors());
@@ -45,6 +48,6 @@ app.use((err, req, res, next) => {
 });
 
 const port = process.env.PORT || 3002;
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });

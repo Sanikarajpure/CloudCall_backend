@@ -1,11 +1,16 @@
 const express = require("express");
 const authRoute = require("./auth.route");
+const friendRoute = require("./friend.route");
 const router = express.Router();
 
 const routesIndex = [
   {
     path: "/auth",
     route: authRoute,
+  },
+  {
+    path: "/friend",
+    route: friendRoute,
   },
 ];
 
