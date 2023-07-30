@@ -21,8 +21,25 @@ const mongoUri = `mongodb+srv://${process.env.DB_ADMIN}:${process.env.DB_PASS}@$
 
 mongoose.connect(mongoUri);
 
-//CORS
-app.use(cors());
+// CORS
+if (process.env.NODE_ENV === "production") {
+  app.use(
+    cors({
+      origin: process.env.ORIGIN_FOR_CORS,
+      methods: ["POST", "GET", "PUT", "DELETE"],
+      credentials: true,
+    })
+  );
+} else {
+  app.use(
+    cors({
+      origin: "*",
+      methods: ["POST", "GET", "PUT", "DELETE", "PATCH"],
+      allowedHeaders: ["Authorization", "Content-Type"],
+      credentials: true,
+    })
+  );
+}
 
 //BODY PARSER
 app.use(express.json());
@@ -32,6 +49,7 @@ app.use(cookieParser());
 
 //SANITIZE JSON
 app.use(xss());
+
 app.use(mongooseSanitize());
 
 //CONFIG FOR IMAGE UPLOAD
