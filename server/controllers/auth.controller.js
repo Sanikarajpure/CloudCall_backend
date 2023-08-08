@@ -23,7 +23,6 @@ const authController = {
 
         let user = await authService.createUser(
           value.email,
-          value.password,
           value.firstName,
           value.lastName,
           value.phone

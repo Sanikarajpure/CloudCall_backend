@@ -28,14 +28,6 @@ const userSchema = mongoose.Schema(
       trim: true,
     },
     lastName: { type: String, required: true, maxLength: 100, trim: true },
-
-    phone: {
-      type: String,
-      required: true,
-      maxLength: 12,
-      trim: true,
-      unique: true,
-    },
     friends: [
       {
         type: mongoose.Schema.Types.ObjectId,

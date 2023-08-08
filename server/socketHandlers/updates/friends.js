@@ -59,12 +59,7 @@ const updateFriends = async (userId) => {
   }
 };
 
-const updateChatHistory = (conversationId) => {
-
-
-
-  
-};
+const updateChatHistory = (conversationId) => {};
 
 module.exports = {
   updateFriendsPendingInvitations,
